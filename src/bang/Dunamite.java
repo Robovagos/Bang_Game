@@ -10,5 +10,5 @@ package bang;
  * @author Γιωργος
  */
 public class Dunamite extends Dice{
-    
+    //test 
 }
