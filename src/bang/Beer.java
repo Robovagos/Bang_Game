@@ -7,8 +7,26 @@ package bang;
 
 /**
  *
- * @author Γιωργος
+ * @author Deoll
  */
 public class Beer {
+    
+    Beer(Player other){
+        this.giveBeer(other);
+    }
+    
+    
+    
+    /**
+     * Takes a Player obj as parameter and increase life by 1
+     * if the Player is not full of life
+     * @param Player
+     */
+    
+    protected void giveBeer(Player other){
+        if(other.getLife() < other.getMaxLife()){
+            other.takeBeer();
+        }
+    }
     
 }

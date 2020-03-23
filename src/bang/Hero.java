@@ -30,7 +30,7 @@ public class Hero extends Player{
      * ...
      */
     private int hero;
-    
+    private String heroName;
     public static boolean[] heroList = {
         true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true};
     
@@ -40,8 +40,11 @@ public class Hero extends Player{
         super(name);
         hero = this.chooseHero();
         this.life += this.getLife();
-        System.out.println(hero);
-        this.getSpecialty();
+        this.heroName = this.getHeroName();
+        
+        
+        this.getSpecialty();        //For Test
+        System.out.println(hero);   //for Test
     }
     /**
      * 
@@ -67,6 +70,11 @@ public class Hero extends Player{
         return number;
     }
     
+    
+    /**
+     * Get the life from the selected hero
+     * @return life(int)
+     */
     public int getlife() {
         
         int lifePerHero=0;
@@ -143,6 +151,88 @@ public class Hero extends Player{
         return lifePerHero;
     }
 
+    /**
+     * Get the name from the selected hero
+     * @return name(String)
+     */
+    public String getHeroName() {
+        
+        String name = "";
+        
+        switch(hero){
+            case 0 : {
+                name="Bart Cassidy (8)";
+                break;
+            }
+            case 1 : {
+                name="Black Jack (8)";
+                break;
+            }
+            case 2 : {
+                name="Calamity Janet (8)";
+                break;
+            }
+            case 3 : {
+                name="El Gringo (7)";
+                break;
+            }
+            case 4 : {
+                name="Jesse Jones (9)";
+                break;
+            }
+            case 5 : {
+                name="Jourdonnais (7)";
+                break;
+            }
+            case 6 : {
+                name="Kit Carlson (7)";
+                break;
+            }
+            case 7 : {
+                name="Lucky Duke (8)";
+                break;
+            }
+            case 8 : {
+                name="Paul Regret (9)";
+                break;
+            }
+            case 9 : {
+                name="Pedro Ramirez (8)";
+                break;
+            }
+            case 10 : {
+                name="Rose Doolan (9)";
+                break;
+            }
+            case 11 : {
+                name="Sid Ketchum (8)";
+                break;
+            }
+            case 12 : {
+                name="Slab The Killer (8)";
+                break;
+            }
+            case 13 : {
+                name="Suzy Lafayette (8)";
+                break;
+            }
+            case 14 : {
+                name="Vulture Sam (9)";
+                break;
+            }
+            case 15 : {
+                name="Willy The Kid (8)";
+                break;
+            }
+            default :{
+                this.getHeroName();
+            }
+        }
+        return name;
+    }
+    /**
+     * Print info for selected hero
+     */
     public void getSpecialty(){
         
         switch(hero){
@@ -249,6 +339,14 @@ public class Hero extends Player{
       
     }
     
+    /**NOT RDY
+     * Idiotites heros
+     * @return 
+     */
+    public void bartCassidy(){
+        this.numberOfArrows++;
+        
+    }
 
 }   
 
